@@ -1,0 +1,34 @@
+<html>
+    <body>
+        <h1>
+                Welcome to the eSignature platform integrated with DocuSign. 
+        </h1>
+        <h2>
+                By using this platform, you will be able to sign a predefined contract and send it to another signatory via email for them to sign.
+            <br>
+                In the end, you will both receive the signed document.
+            <br>
+            <br>
+                Follow these steps to sign a contract:
+            <br>
+                - Enter your name and email address as the first signatory.
+            <br>
+                - Enter the name and email address of the second signatory.
+            <br>
+                - Choose the contract you want to be signed.
+        </h2>
+        <br>
+        <br>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Sign And Add Signatory"/>
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </body>
+</html>

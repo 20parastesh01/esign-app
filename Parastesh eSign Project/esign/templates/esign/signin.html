@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <h3>
+            Welcome to eSign app.
+            <br>
+            In this platform you can sign a contract and send it for another person via email to be signed.
+        </h3>
+        <br>
+        <h1>
+        LogIn or create a new account
+        </h1>
+        <a href="{% url 'signup' %}">Create new account</a>
+        <br>
+        <h2>
+            Registered customers only
+        </h2>
+            <form method="post">
+                {% csrf_token %}
+                <p>{{form}}</p>
+                <button type="submit" name="button" class="btn btn-secondary">SignIn</button>
+            </form>
+    </body>
+</html>

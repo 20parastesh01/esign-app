@@ -1,0 +1,19 @@
+{% if not form.is_valid %}
+    <h1>
+        Create A New Account
+    </h1>
+    <br>
+    <h2>Already have an account?<a href="{% url 'signin' %}">SignIn</a></h2>
+    <p>Enter the following information to create a new account</p>
+        <form method="post">
+            {% csrf_token %}
+            <p>{{form}}</p>
+            <button type="submit" name="button" class="btn btn-secondary">SignUp</button>
+        </form>
+{% else %}
+    <br>
+    <h1 class="product_title text-center">
+        Your account has been created successfuly
+    </h1>
+    <a href="{% url 'instantiation_page' %}">Continue To The App</a>
+{% endif %}
